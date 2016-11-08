@@ -1,0 +1,12 @@
+{
+  "name" : "RAxMLExampleJob",
+  "appId" : "RAxML8.2.9-0.0.3",
+  "archive" : "true",
+  "batchQueue" : "normal",
+  "inputs" : {
+    "phy_file" : "agave://cyverseUK-Storage2/RAxML/demo_data/protein.phy"
+  },
+  "parameters" : {
+    "model" : "PROTGAMMAWAG"
+  }
+}

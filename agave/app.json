@@ -1,0 +1,73 @@
+{
+  "name" : "RAxML8.2.9",
+  "label" : "RAxML on CyverseUK",
+  "version" : "0.0.1",
+  "executionType" : "CLI",
+  "executionSystem": "cyverseUK-Batch2",
+  "deploymentSystem" : "cyverseUK-Storage2",
+  "deploymentPath" : "RAxML/agave",
+  "templatePath" : "wrapper.sh",
+  "testPath" : "test.sh",
+  "parallelism" : "SERIAL",
+  "shortDescription" : "RAxML v8.2.9",
+  "longDescription" : "RAxML v8.2.9",
+  "helpURI" : "http://sco.h-its.org/exelixis/web/software/raxml/index.html#documentation",
+  "author" : "Erik van den Bergh",
+  "tags" : ["testing","CyVerse UK"],
+  "ontology": [ ],
+
+  "inputs": [ 
+    {
+      "id": "phy_file",
+      "details" : {
+	"label" : "RAxML XML file",
+	"description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples"
+      },
+      "value" : {
+	"required" : "true",
+	"default" : "agave://data.iplantcollaborative.org/home/erikvdbergh/testdata/beast2/primates.xml",
+	"visible" : "true"
+      },
+      "semantics" : {
+	"maxCardinality" : 1
+      }
+    }
+  ],
+  "parameters" : [
+    {
+      "id": "model",
+      "details" : {
+        "label" : "Substitution model",
+	"argument" : "-m",
+	"description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi­State,   or   Amino   Acid   Substitution"
+      },
+      "value": {
+        "enumValues": [ {
+	                  "BINCAT": "BINCAT"
+			},
+			{
+	                  "ASC_BINCAT": "ASC_BINCAT"
+			},
+			{
+	                  "BINGAMMA": "BINGAMMA"
+			},
+			{
+	                  "GTRCAT": "GTRCAT"
+			},
+			{
+	                  "ASC_GTRCAT": "ASC_GTRCAT"
+			},
+			{
+	                  "PROTGAMMAWAG": "PROTGAMMAWAG"
+			},
+			{
+	                  "GTRGAMMA": "GTRGAMMA"
+			} ],
+        "required" : "true",
+	"default" : { "GTRCAT":"GTRCAT" },
+	"type" : "enumeration",
+	"visible" : "true"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+universe = docker
+docker_image = cyverseuk/beast2:v0.0.3
+
+output = beast2.out
+error = beast2.err
+log = beast2.log
+
+request_memory = 124G
+request_cpus = 12
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
