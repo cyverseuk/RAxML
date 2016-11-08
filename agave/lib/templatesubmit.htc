@@ -1,9 +1,9 @@
 universe = docker
-docker_image = cyverseuk/beast2:v0.0.3
+docker_image = cyverseuk/RAxML:v0.0.1
 
-output = beast2.out
-error = beast2.err
-log = beast2.log
+output = RAxML.out
+error = RAxML.err
+log = RAxML.log
 
 request_memory = 124G
 request_cpus = 12

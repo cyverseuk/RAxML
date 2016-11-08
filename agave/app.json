@@ -21,7 +21,9 @@
       "id": "phy_file",
       "details" : {
 	"label" : "RAxML XML file",
-	"description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples"
+	"description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples",
+	"argument" : "-s",
+	"showArgument" : "true"
       },
       "value" : {
 	"required" : "true",
@@ -39,7 +41,8 @@
       "details" : {
         "label" : "Substitution model",
 	"argument" : "-m",
-	"description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi­State,   or   Amino   Acid   Substitution"
+	"description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi­State,   or   Amino   Acid   Substitution",
+	"showArgument" : "true"
       },
       "value": {
         "enumValues": [ {
