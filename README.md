@@ -1,2 +1,2 @@
-# beast2
-Agave Docker app for BEAST2 phylo package
+# RAxML
+Agave Docker app for RAxML phylo package
