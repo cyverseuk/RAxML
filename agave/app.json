@@ -18,6 +18,23 @@
 
   "inputs": [
     {
+      "id": "phy_file",
+      "details" : {
+        "label" : "RAxML XML file",
+        "description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples",
+        "argument" : "-s",
+        "showArgument" : "true"
+      },
+      "value" : {
+        "required" : "true",
+        "default" : "agave://data.iplantcollaborative.org/home/erikvdbergh/testdata/RAxML/testGTR.xml",
+        "visible" : "true"
+      },
+      "semantics" : {
+        "maxCardinality" : 1
+      }
+    },
+    {
       "id": "colweight_file",
       "details" : {
         "label" : "Column weight file",
@@ -52,7 +69,7 @@
     {
       "id": "bipart_file",
       "details" : {
-        "label" : "mutiple tree file for drawing bipartition values",
+        "label" : "Multiple tree file for drawing bipartition values",
         "description" : "Only works in combination with \"-f g,h,m,n\". Newick format",
         "argument" : "-z",
         "showArgument" : "true"
@@ -84,7 +101,7 @@
     {
       "id": "multi_constraint_tree",
       "details" : {
-        "label" : "multifurcating constraint tree file",
+        "label" : "Multifurcating constraint tree file",
         "description" : "specify the file name of a multifurcating constraint tree this tree does not  need to be comprehensive, i.e. must not contain all taxa",
         "argument" : "-g",
         "showArgument" : "true"
@@ -100,7 +117,7 @@
     {
       "id": "aa_submodel_file",
       "details" : {
-        "label" : "custom AA substitution model",
+        "label" : "Custom AA substitution model",
         "description" : "This file must contain 420 entries, the first 400 being the AA substitution  rates (this must be a symmetric matrix) and the last 20 are the empirical   base frequencies",
         "argument" : "-P",
         "showArgument" : "true"
@@ -116,7 +133,7 @@
     {
       "id": "mmodel_part_file",
       "details" : {
-        "label" : "file with multiple partition substitution models",
+        "label" : "File with multiple partition substitution models",
         "description" : "see RAxML manual for syntax",
         "argument" : "-q",
         "showArgument" : "true"
@@ -132,7 +149,7 @@
     {
       "id": "binary_tree_file",
       "details" : {
-        "label" : "file with binary constraint tree",
+        "label" : "File with binary constraint tree",
         "description" : "allows you to pass a binary/bifurcating constraint/backbone tree in NEWICK format",
         "argument" : "-r",
         "showArgument" : "true"
@@ -148,7 +165,7 @@
     {
       "id": "binmodel_file",
       "details" : {
-        "label" : "file with binary model parameter from previous RAxML run",
+        "label" : "File with binary model parameter from previous RAxML run",
         "description" : "binary model parameter file that has previously  been generated with RAxML using the  f e tree evaluation option",
         "argument" : "-R",
         "showArgument" : "true"
@@ -164,7 +181,7 @@
     {
       "id": "secstructure_file",
       "details" : {
-        "label" : "file with secondary structure",
+        "label" : "File with secondary structure",
         "description" : "see manual for details",
         "argument" : "-S",
         "showArgument" : "true"
@@ -180,7 +197,7 @@
     {
       "id": "starttree_file",
       "details" : {
-        "label" : "file with user starting tree",
+        "label" : "File with user starting tree",
         "description" : "Newick format",
         "argument" : "-t",
         "showArgument" : "true"
@@ -192,26 +209,204 @@
       "semantics" : {
         "maxCardinality" : 1
       }
-    },
-    {
-      "id": "phy_file",
-      "details" : {
-        "label" : "RAxML XML file",
-        "description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples",
-        "argument" : "-s",
-        "showArgument" : "true"
-      },
-      "value" : {
-        "required" : "true",
-        "default" : "agave://data.iplantcollaborative.org/home/erikvdbergh/testdata/RAxML/testGTR.xml",
-        "visible" : "true"
-      },
-      "semantics" : {
-        "maxCardinality" : 1
-      }
     }
   ],
   "parameters" : [
+    {
+      "id": "algorithm",
+      "details" : {
+        "label" : "Algorithm",
+        "argument" : "-f",
+        "description" : "select algorithm",
+        "showArgument" : "true"
+      },
+      "value": {
+        "enumValues": [ {
+                          "a": "(a) Rapid Bootstrap analysis and search for best scoring ML tree in one program  run"
+                        },
+                        {
+                          "A": "(A) Compute marginal ancestral states on a ROOTED reference tree provided via t"
+                        },
+                        {
+                          "b": "(b) Draw bipartition information on a tree"
+                        },
+                        {
+                          "B": "(B) Optimize br len scaler and other model parameters"
+                        },
+                        {
+                          "c": "(c) Check if the alignment can be properly read by RAxML"
+                        },
+                        {
+                          "C": "(C) Ancestral sequence test"
+                        },
+                        {
+                          "d": "(d) New rapid hill-climbing (default)"
+                        },
+                        {
+                          "D": "(D) New rapid hill-climbing RELL bootstraps"
+                        },
+                        {
+                          "e": "(e) Optimize model parameters+branch lengths"
+                        },
+                        {
+                          "E": "(E) Very fast experimental tree search"
+                        },
+                        {
+                          "F": "(F) Fast experimental tree search"
+                        },
+                        {
+                          "g": "(g) Compute per site log Likelihoods (first tree only)"
+                        },
+                        {
+                          "G": "(G) Compute per site log Likelihoods (each tree)"
+                        },
+                        {
+                          "h": "(h) Compute log likelihood test (SH test) (first tree only)"
+                        },
+                        {
+                          "H": "(H) Compute log likelihood test (SH test) (each tree)"
+                        },
+                        {
+                          "i": "(i) Calculate IC and TC scores"
+                        },
+                        {
+                          "I": "(I) Simple tree rooting algorithm"
+                        },
+                        {
+                          "j": "(j) Generate a bunch (sic) of bootstrapped alignment files"
+                        },
+                        {
+                          "J": "(J) Compute SH like support values"
+                        },
+                        {
+                          "k": "(k) Fix long branch lengths in partitioned data"
+                        },
+                        {
+                          "m": "(m) Compare bipartitions between two bunches of trees"
+                        },
+                        {
+                          "n": "(n) Compute the log likelihood score of all trees (first tree only)"
+                        },
+                        {
+                          "N": "(N) Compute the log likelihood score of all trees (each tree)"
+                        },
+                        {
+                          "o": "(o) Old and slower rapid hill climbing"
+                        },
+                        {
+                          "p": "(p) Pure stepwise MP addition of new sequences"
+                        },
+                        {
+                          "q": "(q) Fast quartet calculator"
+                        },
+                        {
+                          "r": "(r) Compute pairwise Robinson Foulds (RF) distances"
+                        },
+                        {
+                          "R": "(R) Compute pairwise Robinson Foulds (RF) distances (non-weighted)"
+                        },
+                        {
+                          "s": "(s) Split up a multi gene partitioned alignment"
+                        },
+                        {
+                          "S": "(S) Compute site specific placement bias"
+                        },
+                        {
+                          "t": "(t) Randomized tree search"
+                        },
+                        {
+                          "T": "(T) Final thorough optimization of ML tree"
+                        },
+                        {
+                          "u": "(u) Morphological weight calibration using ML"
+                        },
+                        {
+                          "v": "(v) Classify a bunch of environmental sequences into a reference tree"
+                        },
+                        {
+                          "V": "(V) Classify a bunch of environmental sequences into a reference tree"
+                        },
+                        {
+                          "w": "(w) Compute ELW test on a bunch of trees (first tree only)"
+                        },
+                        {
+                          "W": "(W) Compute ELW test on a bunch of trees (each tree)"
+                        },
+                        {
+                          "x": "(x) Compute pair wise ML distances (GTR only)"
+                        },
+                        {
+                          "y": "(y) Classify a bunch of environmental sequences into a reference tree"
+                        }
+                        ],
+        "required" : "true",
+	"default" : "d",
+        "type" : "enumeration",
+        "visible" : "true"
+      }
+    },
+    {
+      "id": "model",
+      "details" : {
+        "label" : "Substitution model type",
+        "argument" : "",
+        "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
+        "showArgument" : "false"
+      },
+      "value": {
+        "enumValues": [ {
+                          "BIN": "Binary (morphological)"
+                        },
+                        {
+                          "GTR": "Nucleotide (GTR)"
+                        },
+                        {
+                          "MULTI": "Multi-state"
+                        },
+                        {
+                          "PROT": "Amino-acid"
+                        },
+                        {
+                          "ASC_GTRCAT": "ASC_GTRCAT"
+                        },
+                        {
+                          "PROTGAMMAWAG": "PROTGAMMAWAG"
+                        },
+                        {
+                          "GTRGAMMA": "GTRGAMMA"
+                        } ],
+        "required" : "true",
+        "type" : "enumeration",
+        "visible" : "true"
+      }
+    },
+    {
+      "id": "modeltype2",
+      "details" : {
+        "label" : "Model type (gamma / categories)",
+        "argument" : "",
+        "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
+        "showArgument" : "false"
+      },
+      "value": {
+        "enumValues": [ {
+                          "CAT": "(CAT) Number of categories"
+                        },
+                        {
+                          "CATI": "(CATI) Number of categories (estimate invariable sites)"
+                        },
+                        {
+                          "GAMMA": "(GAMMA) Gamma model of rate heterogeneity"
+                        },
+                        {
+                          "GAMMA": "(GAMMA) Gamma model of rate heterogeneity (estimate invariable sites)"
+                        }
+                        ],
+        "required" : "true",
+        "type" : "enumeration",
+        "visible" : "true"
+      }
+    },
     {
       "id": "sec_structure_model",
       "details" : {
@@ -297,7 +492,7 @@
     {
       "id" : "num_rate_categories",
       "details": {
-        "label" : "number   of   distinct   rate   categories (CAT model)",
+        "label" : "Number   of   distinct   rate   categories (CAT model)",
         "argument" : "-c",
         "showArgument" : "true"
       },
@@ -323,7 +518,7 @@
     {
       "id" : "random_starttree",
       "details": {
-        "label" : "start ML optimization from random starting tree",
+        "label" : "Start ML optimization from random starting tree",
         "argument" : "-d",
         "showArgument" : "true"
       },
@@ -349,7 +544,7 @@
     {
       "id" : "opt_prec",
       "details": {
-        "label" : "model optimization precision in log likelihood units",
+        "label" : "Model optimization precision in log likelihood units",
         "argument" : "-e",
         "showArgument" : "true"
       },
@@ -357,138 +552,6 @@
         "required": "false",
         "type" : "number",
         "visible": "true"
-      }
-    },
-    {
-      "id": "algorithm",
-      "details" : {
-        "label" : "Algorithm",
-        "argument" : "-f",
-        "description" : "select algorithm",
-        "showArgument" : "true"
-      },
-      "value": {
-        "enumValues": [ {
-                          "a": "(a) rapid Bootstrap analysis and search for best scoring ML tree in one program  run"
-                        },
-                        {
-                          "A": "(A) compute marginal ancestral states on a ROOTED reference tree provided via t"
-                        },
-                        {
-                          "b": "(b) draw bipartition information on a tree"
-                        },
-                        {
-                          "B": "(B) optimize br len scaler and other model parameters"
-                        },
-                        {
-                          "c": "(c) check if the alignment can be properly read by RAxML"
-                        },
-                        {
-                          "C": "(C) ancestral sequence test"
-                        },
-                        {
-                          "d": "(d) new rapid hill-climbing (default)"
-                        },
-                        {
-                          "D": "(D) new rapid hill-climbing RELL bootstraps"
-                        },
-                        {
-                          "e": "(e) optimize model parameters+branch lengths"
-                        },
-                        {
-                          "E": "(E) very fast experimental tree search"
-                        },
-                        {
-                          "F": "(F) fast experimental tree search"
-                        },
-                        {
-                          "g": "(g) compute per site log Likelihoods (first tree only)"
-                        },
-                        {
-                          "G": "(G) compute per site log Likelihoods (each tree)"
-                        },
-                        {
-                          "h": "(h) compute log likelihood test (SH test) (first tree only)"
-                        },
-                        {
-                          "H": "(H) compute log likelihood test (SH test) (each tree)"
-                        },
-                        {
-                          "i": "(i) calculate IC and TC scores"
-                        },
-                        {
-                          "I": "(I) simple tree rooting algorithm"
-                        },
-                        {
-                          "j": "(j) generate a bunch (sic) of bootstrapped alignment files"
-                        },
-                        {
-                          "J": "(J) Compute SH like support values"
-                        },
-                        {
-                          "k": "(k) Fix long branch lengths in partitioned data"
-                        },
-                        {
-                          "m": "(m) compare bipartitions between two bunches of trees"
-                        },
-                        {
-                          "n": "(n) compute the log likelihood score of all trees (first tree only)"
-                        },
-                        {
-                          "N": "(N) compute the log likelihood score of all trees (each tree)"
-                        },
-                        {
-                          "o": "(o) old and slower rapid hill climbing"
-                        },
-                        {
-                          "p": "(p) pure stepwise MP addition of new sequences"
-                        },
-                        {
-                          "q": "(q) fast quartet calculator"
-                        },
-                        {
-                          "r": "(r) compute pairwise Robinson Foulds (RF) distances"
-                        },
-                        {
-                          "R": "(R) compute pairwise Robinson Foulds (RF) distances (non-weighted)"
-                        },
-                        {
-                          "s": "(s) split up a multi gene partitioned alignment"
-                        },
-                        {
-                          "S": "(S) compute site specific placement bias"
-                        },
-                        {
-                          "t": "(t) randomized tree search"
-                        },
-                        {
-                          "T": "(T) final thorough optimization of ML tree"
-                        },
-                        {
-                          "u": "(u) morphological weight calibration using ML"
-                        },
-                        {
-                          "v": "(v) classify a bunch of environmental sequences into a reference tree"
-                        },
-                        {
-                          "V": "(V) classify a bunch of environmental sequences into a reference tree"
-                        },
-                        {
-                          "w": "(w) compute ELW test on a bunch of trees (first tree only)"
-                        },
-                        {
-                          "W": "(W) compute ELW test on a bunch of trees (each tree)"
-                        },
-                        {
-                          "x": "(x) compute pair wise ML distances (GTR only)"
-                        },
-                        {
-                          "y": "(y) classify a bunch of environmental sequences into a reference tree"
-                        }
-                        ],
-        "required" : "true",
-        "type" : "enumeration",
-        "visible" : "true"
       }
     },
     {
@@ -521,7 +584,7 @@
     {
       "id" : "disable_pattern_comp",
       "details": {
-        "label" : "disable pattern compression",
+        "label" : "Disable pattern compression",
         "description" : "disable pattern compression",
         "argument" : "-H",
         "showArgument" : "true"
@@ -535,7 +598,7 @@
     {
       "id" : "rearr_topo_changes",
       "details": {
-        "label" : "rearrangement setting for topological changes phase",
+        "label" : "Rearrangement setting for topological changes phase",
         "description" : "Initial rearrangement setting for the subsequent application of topological        changes phase",
         "argument" : "-i",
         "showArgument" : "true"
@@ -575,7 +638,7 @@
     {
       "id" : "intermediate_trees",
       "details": {
-        "label" : "save intermediate tree files",
+        "label" : "Save intermediate tree files",
         "description" : " intermediate tree files shall be written to file during the  standard ML and BS tree searches",
         "argument" : "-j",
         "showArgument" : "true"
@@ -589,7 +652,7 @@
     {
       "id" : "maj_consensus",
       "details": {
-        "label" : "compute majority rule consensus tree",
+        "label" : "Compute majority rule consensus tree",
         "description" : "Compute majority rule consensus tree",
         "argument" : "-J",
         "showArgument" : "true"
@@ -619,7 +682,7 @@
     {
       "id" : "print_blength",
       "details": {
-        "label" : "print bootstrapped branch lengths",
+        "label" : "Print bootstrapped branch lengths",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
         "argument" : "-k",
         "showArgument" : "true"
@@ -633,7 +696,7 @@
     {
       "id" : "multi_model",
       "details": {
-        "label" : "specify multi-state substitution model",
+        "label" : "Specify multi-state substitution model",
         "description" : "Compute majority rule consensus tree",
         "argument" : "-K",
         "showArgument" : "true"
@@ -657,7 +720,7 @@
     {
       "id" : "ictc_consensus",
       "details": {
-        "label" : "compute consensus tree labeled with IC and TC",
+        "label" : "Compute consensus tree labeled with IC and TC",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
         "argument" : "-L",
         "showArgument" : "true"
@@ -676,44 +739,9 @@
       }
     },
     {
-      "id": "model",
-      "details" : {
-        "label" : "Substitution model type",
-        "argument" : "",
-        "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
-        "showArgument" : "false"
-      },
-      "value": {
-        "enumValues": [ {
-                          "BIN": "Binary (morphological)"
-                        },
-                        {
-                          "GTR": "Nucleotide (GTR)"
-                        },
-                        {
-                          "MULTI": "Multi-state"
-                        },
-                        {
-                          "PROT": "Amino-acid"
-                        },
-                        {
-                          "ASC_GTRCAT": "ASC_GTRCAT"
-                        },
-                        {
-                          "PROTGAMMAWAG": "PROTGAMMAWAG"
-                        },
-                        {
-                          "GTRGAMMA": "GTRGAMMA"
-                        } ],
-        "required" : "true",
-        "type" : "enumeration",
-        "visible" : "true"
-      }
-    },
-    {
       "id" : "model_asc",
       "details": {
-        "label" : "correct likelihood for ascertainment bias",
+        "label" : "Correct likelihood for ascertainment bias",
         "description" : "You will also need to specify the  correction type via --asc-corr",
         "argument" : "",
         "showArgument" : "false"
@@ -725,36 +753,9 @@
       }
     },
     {
-      "id": "modeltype2",
-      "details" : {
-        "label" : "model type (gamma / categories)",
-        "argument" : "",
-        "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
-        "showArgument" : "false"
-      },
-      "value": {
-        "enumValues": [ {
-                          "CAT": "(CAT) Number of categories"
-                        },
-                        {
-                          "CATI": "(CATI) Number of categories (estimate invariable sites)"
-                        },
-                        {
-                          "GAMMA": "(GAMMA) Gamma model of rate heterogeneity"
-                        },
-                        {
-                          "GAMMA": "(GAMMA) Gamma model of rate heterogeneity (estimate invariable sites)"
-                        }
-                        ],
-        "required" : "true",
-        "type" : "enumeration",
-        "visible" : "true"
-      }
-    },
-    {
       "id" : "model_MLestimate",
       "details": {
-        "label" : "specify ML estimate",
+        "label" : "Specify ML estimate",
         "description" : "X suffix",
         "argument" : "",
         "showArgument" : "false"
@@ -768,7 +769,7 @@
     {
       "id": "model_protmatrix",
       "details" : {
-        "label" : "model type (gamma / categories)",
+        "label" : "Model type (gamma / categories)",
         "argument" : "",
         "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
         "showArgument" : "false"
@@ -795,7 +796,7 @@
     {
       "id" : "model_finaltree",
       "details": {
-        "label" : "estimate final tree",
+        "label" : "Estimate final tree",
         "description" : "using empirical base frequencies",
         "argument" : "",
         "showArgument" : "false"
@@ -809,7 +810,7 @@
     {
       "id": "model_aamatrix",
       "details" : {
-        "label" : "protein matrix",
+        "label" : "Protein matrix",
         "argument" : "",
         "description" : "",
         "showArgument" : "false"
@@ -905,7 +906,7 @@
     {
       "id" : "est_perpart",
       "details": {
-        "label" : "estimate individual per-partition branch lengths",
+        "label" : "Estimate individual per-partition branch lengths",
         "description" : "Only  has effect when used in combination with \"-q\"",
         "argument" : "-M",
         "showArgument" : "false"
@@ -919,7 +920,7 @@
     {
       "id" : "outgroup",
       "details": {
-        "label" : "name of outgroup(s)",
+        "label" : "Name of outgroup(s)",
         "description" : "single name or comma separated list e.g. Rat,Mouse",
         "argument" : "-o",
         "showArgument" : "true"
@@ -933,7 +934,7 @@
     {
       "id" : "disable_undertermined",
       "details": {
-        "label" : "disable check for 100% undetermined seqs (don't do this)",
+        "label" : "Disable check for 100% undetermined seqs (don't do this)",
         "description" : "Manual: be warned that you really need to know what you are doing when using this option",
         "argument" : "-O",
         "showArgument" : "false"
@@ -947,7 +948,7 @@
     {
       "id" : "random_seed",
       "details": {
-        "label" : "random number seed",
+        "label" : "Random number seed",
         "description" : "if not given time based seed will be used",
         "argument" : "-p",
         "showArgument" : "true"
@@ -961,7 +962,7 @@
     {
       "id" : "median_gamma",
       "details": {
-        "label" : "use median for GAMMA discrete approximation",
+        "label" : "Use median for GAMMA discrete approximation",
         "description" : "instead of mean",
         "argument" : "-u",
         "showArgument" : "true"
@@ -975,7 +976,7 @@
     {
       "id" : "rate_het_disable",
       "details": {
-        "label" : "disable rate heterogeneity (CAT model only)",
+        "label" : "Disable rate heterogeneity (CAT model only)",
         "description" : "Only   works   if   you   specify   the   CAT   model   of   rate   heterogeneity",
         "argument" : "-V",
         "showArgument" : "true"
@@ -989,7 +990,7 @@
     {
       "id" : "slid_win_size",
       "details": {
-        "label" : "sliding window size for leave one out site specific placement bias algorithm",
+        "label" : "Sliding window size for leave one out site specific placement bias algorithm",
         "description" : "Only   works   with \"-f s\"",
         "argument" : "-W",
         "showArgument" : "true"
@@ -1003,7 +1004,7 @@
     {
       "id" : "rboot_seed",
       "details": {
-        "label" : "rapid bootstrapping seed",
+        "label" : "Rapid bootstrapping seed",
         "description" : "will enable rapid bootstrapping",
         "argument" : "-x",
         "showArgument" : "true"
@@ -1017,7 +1018,7 @@
     {
       "id" : "superf_pars",
       "details": {
-        "label" : "only perform superficial parsimony search",
+        "label" : "Only perform superficial parsimony search",
         "description" : "same as -y but less specific",
         "argument" : "-x",
         "showArgument" : "true"
@@ -1031,7 +1032,7 @@
     {
       "id" : "pars",
       "details": {
-        "label" : "only perform parsimony search",
+        "label" : "Only perform parsimony search",
         "description" : "",
         "argument" : "-y",
         "showArgument" : "true"
@@ -1045,7 +1046,7 @@
     {
       "id" : "num_alt_runs",
       "details": {
-        "label" : "number of alternative runs on distinct starting trees",
+        "label" : "Number of alternative runs on distinct starting trees",
         "description" : "In combination with the \"-b\" option, this will invoke a multiple bootstrap  analysis",
         "argument" : "-N",
         "showArgument" : "true"
@@ -1059,7 +1060,7 @@
     {
       "id" : "mesquite",
       "details": {
-        "label" : "output mesquite compatible files",
+        "label" : "Output mesquite compatible files",
         "description" : "",
         "argument" : "--mesquite",
         "showArgument" : "true"
@@ -1073,7 +1074,7 @@
     {
       "id" : "noseqcheck",
       "details": {
-        "label" : "disable MSA input checking",
+        "label" : "Disable MSA input checking",
         "description" : "check alignment with -f c",
         "argument" : "--no-seq-check",
         "showArgument" : "true"
@@ -1087,7 +1088,7 @@
     {
       "id" : "no_bfgs",
       "details": {
-        "label" : "disable BFGS method for GTR optimization",
+        "label" : "Disable BFGS method for GTR optimization",
         "description" : "disabling BFGS can slow down analysis by 30%",
         "argument" : "--no-bfgs",
         "showArgument" : "true"
@@ -1101,7 +1102,7 @@
     {
       "id": "asc_corr",
       "details" : {
-        "label" : "ascertainment bias correction type",
+        "label" : "Ascertainment bias correction type",
         "argument" : "--asc-corr=",
         "description" : "felsenstein and stamatakis require partition file with -q, see manual for details",
         "showArgument" : "false"
@@ -1125,23 +1126,23 @@
     {
       "id": "aut_prot_model",
       "details" : {
-        "label" : "automatic protein model selection criterion",
+        "label" : "Automatic protein model selection criterion",
         "argument" : "--auto-prot=",
         "description" : "",
         "showArgument" : "false"
       },
       "value": {
         "enumValues": [ {
-                          "ml": "ml"
+                          "ml": "Maximum likelihood (ml)"
                         },
                         {
-                          "bic": "bic"
+                          "bic": "Bayesian Information Criterioin (bic)"
                         },
                         {
-                          "aic": "aic"
+                          "aic": "Aikake Information Criterion (aic)"
                         },
                         {
-                          "aicc": "aicc"
+                          "aicc": "AIC corrected for small sample sizes (aicc)"
                         }
                         ],
         "required" : "false",
@@ -1152,7 +1153,7 @@
     {
       "id" : "epa_keep_placement",
       "details": {
-        "label" : "amount of epa placements to keep",
+        "label" : "Amount of epa placements to keep",
         "description" : "",
         "argument" : "--epa-keep-placements=",
         "showArgument" : "true"
@@ -1166,7 +1167,7 @@
     {
       "id" : "epa_prob_tresh",
       "details": {
-        "label" : "percent threshold for including potential placements of a read",
+        "label" : "Percent threshold for including potential placements of a read",
         "description" : "see manual for details",
         "argument" : "--epa-prob-treshold=",
         "showArgument" : "true"
@@ -1180,7 +1181,7 @@
     {
       "id" : "epa_acc_tresh",
       "details": {
-        "label" : "accumulated likelihood weight  threshold for different placements of read",
+        "label" : "Accumulated likelihood weight  threshold for different placements of read",
         "description" : "see manual for details",
         "argument" : "--epa-accumulated-treshold=",
         "showArgument" : "true"
@@ -1194,7 +1195,7 @@
     {
       "id" : "jc69",
       "details": {
-        "label" : "use JC69 for all partitions",
+        "label" : "Use JC69 for all partitions",
         "description" : "overrides all other model specifications",
         "argument" : "--JC69",
         "showArgument" : "true"
@@ -1208,7 +1209,7 @@
     {
       "id" : "k80",
       "details": {
-        "label" : "use K80 for all partitions",
+        "label" : "Use K80 for all partitions",
         "description" : "overrides all other model specifications",
         "argument" : "--K80",
         "showArgument" : "true"
@@ -1222,7 +1223,7 @@
     {
       "id" : "hky85",
       "details": {
-        "label" : "use HKY85 for all partitions",
+        "label" : "Use HKY85 for all partitions",
         "description" : "overrides all other model specifications",
         "argument" : "--HKY85",
         "showArgument" : "true"
@@ -1236,7 +1237,7 @@
     {
       "id" : "bootstop_perms",
       "details": {
-        "label" : "number of permutations for the  bootstopping/bootstrap convergence test",
+        "label" : "Number of permutations for the  bootstopping/bootstrap convergence test",
         "description" : "must be 100 at least",
         "argument" : "--bootstop-perms=",
         "showArgument" : "true"
@@ -1250,7 +1251,7 @@
     {
       "id" : "quart_no_replace",
       "details": {
-        "label" : "specify that quartets are randomly subsampled, but without replacement",
+        "label" : "Specify that quartets are randomly subsampled, but without replacement",
         "description" : "",
         "argument" : "--quartets-without-replacement",
         "showArgument" : "true"
@@ -1264,7 +1265,7 @@
     {
       "id" : "print_ident_seqs",
       "details": {
-        "label" : "don't remove identical sequences from .reduced file",
+        "label" : "Don't remove identical sequences from .reduced file",
         "description" : "",
         "argument" : "--print-identical-sequences",
         "showArgument" : "true"
