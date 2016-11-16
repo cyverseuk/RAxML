@@ -22,7 +22,7 @@
       "details" : {
         "label" : "RAxML XML file",
         "description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples",
-        "argument" : "-s",
+        "argument" : "-s ",
         "showArgument" : "true"
       },
       "value" : {
@@ -39,7 +39,7 @@
       "details" : {
         "label" : "Column weight file",
         "description" : "Specify a column weight file name to assign individual weights to each column of the alignment. Those weights must be integers separated by any type and number of white spaces within a separate file.",
-        "argument" : "-a",
+        "argument" : "-a ",
         "showArgument" : "true"
       },
       "value" : {
@@ -55,7 +55,7 @@
       "details" : {
         "label" : "Quartet grouping file",
         "description" : "Only works in combination with \"-f q\". See manual for syntax",
-        "argument" : "-Y",
+        "argument" : "-Y ",
         "showArgument" : "true"
       },
       "value" : {
@@ -71,7 +71,7 @@
       "details" : {
         "label" : "Multiple tree file for drawing bipartition values",
         "description" : "Only works in combination with \"-f g,h,m,n\". Newick format",
-        "argument" : "-z",
+        "argument" : "-z ",
         "showArgument" : "true"
       },
       "value" : {
@@ -87,7 +87,7 @@
       "details" : {
         "label" : "Exclusion file",
         "description" : "Specify a column weight file name to assign individual weights to each  column of the alignment. Those weights must be integers separated by any type and number of white spaces within a separate file.",
-        "argument" : "-E",
+        "argument" : "-E ",
         "showArgument" : "true"
       },
       "value" : {
@@ -103,7 +103,7 @@
       "details" : {
         "label" : "Multifurcating constraint tree file",
         "description" : "specify the file name of a multifurcating constraint tree this tree does not  need to be comprehensive, i.e. must not contain all taxa",
-        "argument" : "-g",
+        "argument" : "-g ",
         "showArgument" : "true"
       },
       "value" : {
@@ -119,7 +119,7 @@
       "details" : {
         "label" : "Custom AA substitution model",
         "description" : "This file must contain 420 entries, the first 400 being the AA substitution  rates (this must be a symmetric matrix) and the last 20 are the empirical   base frequencies",
-        "argument" : "-P",
+        "argument" : "-P ",
         "showArgument" : "true"
       },
       "value" : {
@@ -135,7 +135,7 @@
       "details" : {
         "label" : "File with multiple partition substitution models",
         "description" : "see RAxML manual for syntax",
-        "argument" : "-q",
+        "argument" : "-q ",
         "showArgument" : "true"
       },
       "value" : {
@@ -151,7 +151,7 @@
       "details" : {
         "label" : "File with binary constraint tree",
         "description" : "allows you to pass a binary/bifurcating constraint/backbone tree in NEWICK format",
-        "argument" : "-r",
+        "argument" : "-r ",
         "showArgument" : "true"
       },
       "value" : {
@@ -167,7 +167,7 @@
       "details" : {
         "label" : "File with binary model parameter from previous RAxML run",
         "description" : "binary model parameter file that has previously  been generated with RAxML using the  f e tree evaluation option",
-        "argument" : "-R",
+        "argument" : "-R ",
         "showArgument" : "true"
       },
       "value" : {
@@ -183,7 +183,7 @@
       "details" : {
         "label" : "File with secondary structure",
         "description" : "see manual for details",
-        "argument" : "-S",
+        "argument" : "-S ",
         "showArgument" : "true"
       },
       "value" : {
@@ -199,7 +199,7 @@
       "details" : {
         "label" : "File with user starting tree",
         "description" : "Newick format",
-        "argument" : "-t",
+        "argument" : "-t ",
         "showArgument" : "true"
       },
       "value" : {
@@ -216,7 +216,7 @@
       "id": "algorithm",
       "details" : {
         "label" : "Algorithm",
-        "argument" : "-f",
+        "argument" : "-f ",
         "description" : "select algorithm",
         "showArgument" : "true"
       },
@@ -349,7 +349,7 @@
       "id": "model",
       "details" : {
         "label" : "Substitution model type",
-        "argument" : "",
+        "argument" : " ",
         "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
         "showArgument" : "false"
       },
@@ -376,7 +376,7 @@
       "id": "model2",
       "details" : {
         "label" : "Model type (gamma / categories)",
-        "argument" : "",
+        "argument" : " ",
         "description" : "Use per-site model of rate heterogeneity (CAT) or Gamma model of rate heterogeneity",
         "showArgument" : "false"
       },
@@ -404,7 +404,7 @@
       "details": {
         "label" : "Correct likelihood for ascertainment bias",
         "description" : "You will also need to specify the  correction type via --asc-corr",
-        "argument" : "",
+        "argument" : " ",
         "showArgument" : "false"
       },
       "value": {
@@ -418,7 +418,7 @@
       "details": {
         "label" : "Specify ML estimate",
         "description" : "X suffix",
-        "argument" : "",
+        "argument" : " ",
         "showArgument" : "false"
       },
       "value": {
@@ -432,7 +432,7 @@
       "details": {
         "label" : "Estimate final tree (AA alignment only)",
         "description" : "using empirical base frequencies",
-        "argument" : "",
+        "argument" : " ",
         "showArgument" : "false"
       },
       "value": {
@@ -445,7 +445,7 @@
       "id": "model_aamatrix",
       "details" : {
         "label" : "Protein matrix (AA alignment only)",
-        "argument" : "",
+        "argument" : " ",
         "description" : "",
         "showArgument" : "false"
       },
@@ -541,7 +541,7 @@
       "id": "sec_structure_model",
       "details" : {
         "label" : "Secondary structure model",
-        "argument" : "-A",
+        "argument" : "-A ",
         "description" : "Specify one of the secondary structure substitution models implemented in RAxML",
         "showArgument" : "true"
       },
@@ -597,7 +597,7 @@
       "id" : "boot_seed",
       "details": {
         "label" : "Bootstrap random seed",
-        "argument" : "-b",
+        "argument" : "-b ",
         "showArgument" : "true"
       },
       "value": {
@@ -610,7 +610,7 @@
       "id" : "mrboot_tresh",
       "details": {
         "label" : "MR bootstopping treshold",
-        "argument" : "-B",
+        "argument" : "-B ",
         "showArgument" : "true"
       },
       "value": {
@@ -623,7 +623,7 @@
       "id" : "num_rate_categories",
       "details": {
         "label" : "Number   of   distinct   rate   categories (CAT model)",
-        "argument" : "-c",
+        "argument" : "-c ",
         "showArgument" : "true"
       },
       "value": {
@@ -636,7 +636,7 @@
       "id" : "tcic_verbose",
       "details": {
         "label" : "Enable verbose output for the \" L\" and \" f i\" options",
-        "argument" : "-C",
+        "argument" : "-C ",
         "showArgument" : "true"
       },
       "value": {
@@ -649,7 +649,7 @@
       "id" : "random_starttree",
       "details": {
         "label" : "Start ML optimization from random starting tree",
-        "argument" : "-d",
+        "argument" : "-d ",
         "showArgument" : "true"
       },
       "value": {
@@ -662,7 +662,7 @@
       "id" : "ml_conv_crit",
       "details": {
         "label" : "ML   search   convergence   criterion",
-        "argument" : "-D",
+        "argument" : "-D ",
         "showArgument" : "true"
       },
       "value": {
@@ -675,7 +675,7 @@
       "id" : "opt_prec",
       "details": {
         "label" : "Model optimization precision in log likelihood units",
-        "argument" : "-e",
+        "argument" : "-e ",
         "showArgument" : "true"
       },
       "value": {
@@ -688,7 +688,7 @@
       "id" : "ML_tree_largemem",
       "details": {
         "label" : "ML tree search without GAMMA (CAT model)",
-        "argument" : "-F",
+        "argument" : "-F ",
         "showArgument" : "true"
       },
       "value": {
@@ -702,7 +702,7 @@
       "details": {
         "label" : "ML based evolutionary placement algorithm treshold",
         "description" : "specify the file name of a multifurcating constraint tree this tree does not  need to be comprehensive, i.e. must not contain all taxa",
-        "argument" : "-G",
+        "argument" : "-G ",
         "showArgument" : "true"
       },
       "value": {
@@ -716,7 +716,7 @@
       "details": {
         "label" : "Disable pattern compression",
         "description" : "disable pattern compression",
-        "argument" : "-H",
+        "argument" : "-H ",
         "showArgument" : "true"
       },
       "value": {
@@ -730,7 +730,7 @@
       "details": {
         "label" : "Rearrangement setting for topological changes phase",
         "description" : "Initial rearrangement setting for the subsequent application of topological        changes phase",
-        "argument" : "-i",
+        "argument" : "-i ",
         "showArgument" : "true"
       },
       "value": {
@@ -743,7 +743,7 @@
       "id": "post_boot",
       "details" : {
         "label" : "A posteriori bootstopping analysis",
-        "argument" : "-I",
+        "argument" : "-I ",
         "description" : "carry out the bootstrap convergence test, that is, the test that determines if you have computed sufficient BS replicates for getting stable support values, a posteriori.",
         "showArgument" : "true"
       },
@@ -770,7 +770,7 @@
       "details": {
         "label" : "Save intermediate tree files",
         "description" : " intermediate tree files shall be written to file during the  standard ML and BS tree searches",
-        "argument" : "-j",
+        "argument" : "-j ",
         "showArgument" : "true"
       },
       "value": {
@@ -784,7 +784,7 @@
       "details": {
         "label" : "Compute majority rule consensus tree",
         "description" : "Compute majority rule consensus tree",
-        "argument" : "-J",
+        "argument" : "-J ",
         "showArgument" : "true"
       },
       "value": {
@@ -814,7 +814,7 @@
       "details": {
         "label" : "Print bootstrapped branch lengths",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
-        "argument" : "-k",
+        "argument" : "-k ",
         "showArgument" : "true"
       },
       "value": {
@@ -828,7 +828,7 @@
       "details": {
         "label" : "Specify multi-state substitution model",
         "description" : "Compute majority rule consensus tree",
-        "argument" : "-K",
+        "argument" : "-K ",
         "showArgument" : "true"
       },
       "value": {
@@ -852,7 +852,7 @@
       "details": {
         "label" : "Compute consensus tree labeled with IC and TC",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
-        "argument" : "-L",
+        "argument" : "-L ",
         "showArgument" : "true"
       },
       "value": {
@@ -873,7 +873,7 @@
       "details": {
         "label" : "Estimate individual per-partition branch lengths",
         "description" : "Only  has effect when used in combination with \"-q\"",
-        "argument" : "-M",
+        "argument" : "-M ",
         "showArgument" : "false"
       },
       "value": {
@@ -887,7 +887,7 @@
       "details": {
         "label" : "Name of outgroup(s)",
         "description" : "single name or comma separated list e.g. Rat,Mouse",
-        "argument" : "-o",
+        "argument" : "-o ",
         "showArgument" : "true"
       },
       "value": {
@@ -901,7 +901,7 @@
       "details": {
         "label" : "Disable check for 100% undetermined seqs (don't do this)",
         "description" : "Manual: be warned that you really need to know what you are doing when using this option",
-        "argument" : "-O",
+        "argument" : "-O ",
         "showArgument" : "false"
       },
       "value": {
@@ -915,7 +915,7 @@
       "details": {
         "label" : "Random number seed",
         "description" : "if not given time based seed will be used",
-        "argument" : "-p",
+        "argument" : "-p ",
         "showArgument" : "true"
       },
       "value": {
@@ -929,7 +929,7 @@
       "details": {
         "label" : "Use median for GAMMA discrete approximation",
         "description" : "instead of mean",
-        "argument" : "-u",
+        "argument" : "-u ",
         "showArgument" : "true"
       },
       "value": {
@@ -943,7 +943,7 @@
       "details": {
         "label" : "Disable rate heterogeneity (CAT model only)",
         "description" : "Only   works   if   you   specify   the   CAT   model   of   rate   heterogeneity",
-        "argument" : "-V",
+        "argument" : "-V ",
         "showArgument" : "true"
       },
       "value": {
@@ -957,7 +957,7 @@
       "details": {
         "label" : "Sliding window size for leave one out site specific placement bias algorithm",
         "description" : "Only   works   with \"-f s\"",
-        "argument" : "-W",
+        "argument" : "-W ",
         "showArgument" : "true"
       },
       "value": {
@@ -971,7 +971,7 @@
       "details": {
         "label" : "Rapid bootstrapping seed",
         "description" : "will enable rapid bootstrapping",
-        "argument" : "-x",
+        "argument" : "-x ",
         "showArgument" : "true"
       },
       "value": {
@@ -985,7 +985,7 @@
       "details": {
         "label" : "Only perform superficial parsimony search",
         "description" : "same as -y but less specific",
-        "argument" : "-x",
+        "argument" : "-x ",
         "showArgument" : "true"
       },
       "value": {
@@ -999,7 +999,7 @@
       "details": {
         "label" : "Only perform parsimony search",
         "description" : "",
-        "argument" : "-y",
+        "argument" : "-y ",
         "showArgument" : "true"
       },
       "value": {
@@ -1013,7 +1013,7 @@
       "details": {
         "label" : "Number of alternative runs on distinct starting trees",
         "description" : "In combination with the \"-b\" option, this will invoke a multiple bootstrap  analysis",
-        "argument" : "-N",
+        "argument" : "-N ",
         "showArgument" : "true"
       },
       "value": {
@@ -1027,7 +1027,7 @@
       "details": {
         "label" : "Output mesquite compatible files",
         "description" : "",
-        "argument" : "--mesquite",
+        "argument" : "--mesquite ",
         "showArgument" : "true"
       },
       "value": {
@@ -1041,7 +1041,7 @@
       "details": {
         "label" : "Disable MSA input checking",
         "description" : "check alignment with -f c",
-        "argument" : "--no-seq-check",
+        "argument" : "--no-seq-check ",
         "showArgument" : "true"
       },
       "value": {
@@ -1055,7 +1055,7 @@
       "details": {
         "label" : "Disable BFGS method for GTR optimization",
         "description" : "disabling BFGS can slow down analysis by 30%",
-        "argument" : "--no-bfgs",
+        "argument" : "--no-bfgs ",
         "showArgument" : "true"
       },
       "value": {
@@ -1162,7 +1162,7 @@
       "details": {
         "label" : "Use JC69 for all partitions",
         "description" : "overrides all other model specifications",
-        "argument" : "--JC69",
+        "argument" : "--JC69 ",
         "showArgument" : "true"
       },
       "value": {
@@ -1176,7 +1176,7 @@
       "details": {
         "label" : "Use K80 for all partitions",
         "description" : "overrides all other model specifications",
-        "argument" : "--K80",
+        "argument" : "--K80 ",
         "showArgument" : "true"
       },
       "value": {
@@ -1190,7 +1190,7 @@
       "details": {
         "label" : "Use HKY85 for all partitions",
         "description" : "overrides all other model specifications",
-        "argument" : "--HKY85",
+        "argument" : "--HKY85 ",
         "showArgument" : "true"
       },
       "value": {
@@ -1218,7 +1218,7 @@
       "details": {
         "label" : "Specify that quartets are randomly subsampled, but without replacement",
         "description" : "",
-        "argument" : "--quartets-without-replacement",
+        "argument" : "--quartets-without-replacement ",
         "showArgument" : "true"
       },
       "value": {
@@ -1232,7 +1232,7 @@
       "details": {
         "label" : "Don't remove identical sequences from .reduced file",
         "description" : "",
-        "argument" : "--print-identical-sequences",
+        "argument" : "--print-identical-sequences ",
         "showArgument" : "true"
       },
       "value": {
