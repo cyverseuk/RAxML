@@ -365,27 +365,19 @@
                         },
                         {
                           "PROT": "Amino-acid"
-                        },
-                        {
-                          "ASC_GTRCAT": "ASC_GTRCAT"
-                        },
-                        {
-                          "PROTGAMMAWAG": "PROTGAMMAWAG"
-                        },
-                        {
-                          "GTRGAMMA": "GTRGAMMA"
-                        } ],
+                        }
+                        ],
         "required" : "true",
         "type" : "enumeration",
         "visible" : "true"
       }
     },
     {
-      "id": "modeltype2",
+      "id": "model2",
       "details" : {
         "label" : "Model type (gamma / categories)",
         "argument" : "",
-        "description" : "Model   of   Binary   (Morphological),   Nucleotide,   Multi State,   or   Amino   Acid   Substitution",
+        "description" : "Use per-site model of rate heterogeneity (CAT) or Gamma model of rate heterogeneity",
         "showArgument" : "false"
       },
       "value": {
@@ -403,6 +395,144 @@
                         }
                         ],
         "required" : "true",
+        "type" : "enumeration",
+        "visible" : "true"
+      }
+    },
+    {
+      "id" : "model_asc",
+      "details": {
+        "label" : "Correct likelihood for ascertainment bias",
+        "description" : "You will also need to specify the  correction type via --asc-corr",
+        "argument" : "",
+        "showArgument" : "false"
+      },
+      "value": {
+        "required": "false",
+        "type" : "flag",
+        "visible": "true"
+      }
+    },
+    {
+      "id" : "model_MLestimate",
+      "details": {
+        "label" : "Specify ML estimate",
+        "description" : "X suffix",
+        "argument" : "",
+        "showArgument" : "false"
+      },
+      "value": {
+        "required": "false",
+        "type" : "flag",
+        "visible": "true"
+      }
+    },
+    {
+      "id" : "model_finaltree",
+      "details": {
+        "label" : "Estimate final tree (AA alignment only)",
+        "description" : "using empirical base frequencies",
+        "argument" : "",
+        "showArgument" : "false"
+      },
+      "value": {
+        "required": "false",
+        "type" : "flag",
+        "visible": "true"
+      }
+    },
+    {
+      "id": "model_aamatrix",
+      "details" : {
+        "label" : "Protein matrix (AA alignment only)",
+        "argument" : "",
+        "description" : "",
+        "showArgument" : "false"
+      },
+      "value": {
+        "enumValues": [ {
+                          "DAYHOFF": "DAYHOFF"
+                        },
+                        {
+                          "DCMUT": "DCMUT"
+                        },
+                        {
+                          "JTT": "JTT"
+                        },
+                        {
+                          "MTREV": "MTREV"
+                        },
+                        {
+                          "WAG": "WAG"
+                        },
+                        {
+                          "RTREV": "RTREV"
+                        },
+                        {
+                          "CPREV": "CPREV"
+                        },
+                        {
+                          "VT": "VT"
+                        },
+                        {
+                          "BLOSUM62": "BLOSUM62"
+                        },
+                        {
+                          "MTMAM": "MTMAM"
+                        },
+                        {
+                          "LG": "LG"
+                        },
+                        {
+                          "MTART": "MTART"
+                        },
+                        {
+                          "MTZOA": "MTZOA"
+                        },
+                        {
+                          "PMB": "PMB"
+                        },
+                        {
+                          "HIVB": "HIVB"
+                        },
+                        {
+                          "HIVW": "HIVW"
+                        },
+                        {
+                          "JTTDCMUT": "JTTDCMUT"
+                        },
+                        {
+                          "FLU": "FLU"
+                        },
+                        {
+                          "STMTREV": "STMTREV"
+                        },
+                        {
+                          "DUMMY": "DUMMY"
+                        },
+                        {
+                          "DUMMY2": "DUMMY2"
+                        },
+                        {
+                          "AUTO": "AUTO"
+                        },
+                        {
+                          "LG4M": "LG4M"
+                        },
+                        {
+                          "LG4X": "LG4X"
+                        },
+                        {
+                          "PROT_FILE": "PROT_FILE"
+                        },
+                        {
+                          "GTR_UNLINKED": "GTR_UNLINKED"
+                        },
+                        {
+                          "GTR": "GTR"
+                        }
+                        ],
+        "required" : "false",
         "type" : "enumeration",
         "visible" : "true"
       }
