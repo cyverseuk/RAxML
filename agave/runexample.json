@@ -9,6 +9,6 @@
   "parameters" : {
     "algorithm" : "d",
     "model": "GTR",
-    "modeltype2": "GAMMA"
+    "model2": "GAMMA"
   }
 }
