@@ -399,7 +399,7 @@
                           "GAMMA": "(GAMMA) Gamma model of rate heterogeneity"
                         },
                         {
-                          "GAMMA": "(GAMMA) Gamma model of rate heterogeneity (estimate invariable sites)"
+                          "GAMMAI": "(GAMMA) Gamma model of rate heterogeneity (estimate invariable sites)"
                         }
                         ],
         "required" : "true",
