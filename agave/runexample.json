@@ -8,7 +8,8 @@
   },
   "parameters" : {
     "algorithm" : "d",
-    "model": "GTR",
-    "model2": "GAMMA"
+    "model": "PROT",
+    "model2": "GAMMA",
+    "model_aamatrix": "GTR"
   }
 }

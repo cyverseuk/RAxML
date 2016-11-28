@@ -20,7 +20,7 @@
     {
       "id": "phy_file",
       "details" : {
-        "label" : "RAxML XML file",
+        "label" : "RAxML XML file (-s)",
         "description" : "XML file with sequences and options for RAxML, see CyVerse wiki for examples",
         "argument" : "-s ",
         "showArgument" : "true"
@@ -37,7 +37,7 @@
     {
       "id": "colweight_file",
       "details" : {
-        "label" : "Column weight file",
+        "label" : "Column weight file (-a)",
         "description" : "Specify a column weight file name to assign individual weights to each column of the alignment. Those weights must be integers separated by any type and number of white spaces within a separate file.",
         "argument" : "-a ",
         "showArgument" : "true"
@@ -51,7 +51,7 @@
       }
     },
     {
-      "id": "quartet_group_file",
+      "id": "quartet_group_file (-Y)",
       "details" : {
         "label" : "Quartet grouping file",
         "description" : "Only works in combination with \"-f q\". See manual for syntax",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "bipart_file",
+      "id": "bipart_file (-z)",
       "details" : {
         "label" : "Multiple tree file for drawing bipartition values",
         "description" : "Only works in combination with \"-f g,h,m,n\". Newick format",
@@ -85,7 +85,7 @@
     {
       "id": "exclude_file",
       "details" : {
-        "label" : "Exclusion file",
+        "label" : "Exclusion file (-E)",
         "description" : "Specify a column weight file name to assign individual weights to each  column of the alignment. Those weights must be integers separated by any type and number of white spaces within a separate file.",
         "argument" : "-E ",
         "showArgument" : "true"
@@ -99,7 +99,7 @@
       }
     },
     {
-      "id": "multi_constraint_tree",
+      "id": "multi_constraint_tree (-g)",
       "details" : {
         "label" : "Multifurcating constraint tree file",
         "description" : "specify the file name of a multifurcating constraint tree this tree does not  need to be comprehensive, i.e. must not contain all taxa",
@@ -115,7 +115,7 @@
       }
     },
     {
-      "id": "aa_submodel_file",
+      "id": "aa_submodel_file (-P)",
       "details" : {
         "label" : "Custom AA substitution model",
         "description" : "This file must contain 420 entries, the first 400 being the AA substitution  rates (this must be a symmetric matrix) and the last 20 are the empirical   base frequencies",
@@ -133,7 +133,7 @@
     {
       "id": "mmodel_part_file",
       "details" : {
-        "label" : "File with multiple partition substitution models",
+        "label" : "File with multiple partition substitution models (-q)",
         "description" : "see RAxML manual for syntax",
         "argument" : "-q ",
         "showArgument" : "true"
@@ -147,7 +147,7 @@
       }
     },
     {
-      "id": "binary_tree_file",
+      "id": "binary_tree_file (-r)",
       "details" : {
         "label" : "File with binary constraint tree",
         "description" : "allows you to pass a binary/bifurcating constraint/backbone tree in NEWICK format",
@@ -163,7 +163,7 @@
       }
     },
     {
-      "id": "binmodel_file",
+      "id": "binmodel_file (-R)",
       "details" : {
         "label" : "File with binary model parameter from previous RAxML run",
         "description" : "binary model parameter file that has previously  been generated with RAxML using the  f e tree evaluation option",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "id": "secstructure_file",
+      "id": "secstructure_file (-S)",
       "details" : {
         "label" : "File with secondary structure",
         "description" : "see manual for details",
@@ -195,7 +195,7 @@
       }
     },
     {
-      "id": "starttree_file",
+      "id": "starttree_file (-t)",
       "details" : {
         "label" : "File with user starting tree",
         "description" : "Newick format",
@@ -215,7 +215,7 @@
     {
       "id": "algorithm",
       "details" : {
-        "label" : "Algorithm",
+        "label" : "Algorithm (-f)",
         "argument" : "-f ",
         "description" : "select algorithm",
         "showArgument" : "true"
@@ -240,7 +240,7 @@
                           "C": "(C) Ancestral sequence test"
                         },
                         {
-                          "d": "(d) New rapid hill-climbing (default)"
+                          "d": "(d) New rapid hill-climbing"
                         },
                         {
                           "D": "(D) New rapid hill-climbing RELL bootstraps"
@@ -540,7 +540,7 @@
     {
       "id": "sec_structure_model",
       "details" : {
-        "label" : "Secondary structure model",
+        "label" : "Secondary structure model (-A)",
         "argument" : "-A ",
         "description" : "Specify one of the secondary structure substitution models implemented in RAxML",
         "showArgument" : "true"
@@ -596,7 +596,7 @@
     {
       "id" : "boot_seed",
       "details": {
-        "label" : "Bootstrap random seed",
+        "label" : "Bootstrap random seed (-b)",
         "argument" : "-b ",
         "showArgument" : "true"
       },
@@ -609,7 +609,7 @@
     {
       "id" : "mrboot_tresh",
       "details": {
-        "label" : "MR bootstopping treshold",
+        "label" : "MR bootstopping treshold (-B)",
         "argument" : "-B ",
         "showArgument" : "true"
       },
@@ -635,7 +635,7 @@
     {
       "id" : "tcic_verbose",
       "details": {
-        "label" : "Enable verbose output for the \" L\" and \" f i\" options",
+        "label" : "Enable verbose output for the \"-L\" and \"-f i\" options (-C)",
         "argument" : "-C ",
         "showArgument" : "true"
       },
@@ -648,7 +648,7 @@
     {
       "id" : "random_starttree",
       "details": {
-        "label" : "Start ML optimization from random starting tree",
+        "label" : "Start ML optimization from random starting tree (-d)",
         "argument" : "-d ",
         "showArgument" : "true"
       },
@@ -661,7 +661,7 @@
     {
       "id" : "ml_conv_crit",
       "details": {
-        "label" : "ML   search   convergence   criterion",
+        "label" : "ML search convergence criterion (-D)",
         "argument" : "-D ",
         "showArgument" : "true"
       },
@@ -674,7 +674,7 @@
     {
       "id" : "opt_prec",
       "details": {
-        "label" : "Model optimization precision in log likelihood units",
+        "label" : "Model optimization precision in log likelihood units (-e)",
         "argument" : "-e ",
         "showArgument" : "true"
       },
@@ -687,7 +687,7 @@
     {
       "id" : "ML_tree_largemem",
       "details": {
-        "label" : "ML tree search without GAMMA (CAT model)",
+        "label" : "ML tree search without GAMMA (CAT model) (-F)",
         "argument" : "-F ",
         "showArgument" : "true"
       },
@@ -700,7 +700,7 @@
     {
       "id" : "evo_placement_tresh",
       "details": {
-        "label" : "ML based evolutionary placement algorithm treshold",
+        "label" : "ML based evolutionary placement algorithm treshold (-G)",
         "description" : "specify the file name of a multifurcating constraint tree this tree does not  need to be comprehensive, i.e. must not contain all taxa",
         "argument" : "-G ",
         "showArgument" : "true"
@@ -714,7 +714,7 @@
     {
       "id" : "disable_pattern_comp",
       "details": {
-        "label" : "Disable pattern compression",
+        "label" : "Disable pattern compression (-H)",
         "description" : "disable pattern compression",
         "argument" : "-H ",
         "showArgument" : "true"
@@ -728,7 +728,7 @@
     {
       "id" : "rearr_topo_changes",
       "details": {
-        "label" : "Rearrangement setting for topological changes phase",
+        "label" : "Rearrangement setting for topological changes phase (-i)",
         "description" : "Initial rearrangement setting for the subsequent application of topological        changes phase",
         "argument" : "-i ",
         "showArgument" : "true"
@@ -742,7 +742,7 @@
     {
       "id": "post_boot",
       "details" : {
-        "label" : "A posteriori bootstopping analysis",
+        "label" : "A posteriori bootstopping analysis (-I)",
         "argument" : "-I ",
         "description" : "carry out the bootstrap convergence test, that is, the test that determines if you have computed sufficient BS replicates for getting stable support values, a posteriori.",
         "showArgument" : "true"
@@ -768,7 +768,7 @@
     {
       "id" : "intermediate_trees",
       "details": {
-        "label" : "Save intermediate tree files",
+        "label" : "Save intermediate tree files (-j)",
         "description" : " intermediate tree files shall be written to file during the  standard ML and BS tree searches",
         "argument" : "-j ",
         "showArgument" : "true"
@@ -782,7 +782,7 @@
     {
       "id" : "maj_consensus",
       "details": {
-        "label" : "Compute majority rule consensus tree",
+        "label" : "Compute majority rule consensus tree (-J)",
         "description" : "Compute majority rule consensus tree",
         "argument" : "-J ",
         "showArgument" : "true"
@@ -812,7 +812,7 @@
     {
       "id" : "print_blength",
       "details": {
-        "label" : "Print bootstrapped branch lengths",
+        "label" : "Print bootstrapped branch lengths (-k)",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
         "argument" : "-k ",
         "showArgument" : "true"
@@ -850,7 +850,7 @@
     {
       "id" : "ictc_consensus",
       "details": {
-        "label" : "Compute consensus tree labeled with IC and TC",
+        "label" : "Compute consensus tree labeled with IC and TC (-L)",
         "description" : "Specifies that bootstrapped trees should be printed with branch lengths",
         "argument" : "-L ",
         "showArgument" : "true"
@@ -871,7 +871,7 @@
     {
       "id" : "est_perpart",
       "details": {
-        "label" : "Estimate individual per-partition branch lengths",
+        "label" : "Estimate individual per-partition branch lengths (-M)",
         "description" : "Only  has effect when used in combination with \"-q\"",
         "argument" : "-M ",
         "showArgument" : "false"
@@ -899,7 +899,7 @@
     {
       "id" : "disable_undertermined",
       "details": {
-        "label" : "Disable check for 100% undetermined seqs (don't do this)",
+        "label" : "Disable check for 100% undetermined seqs (don't do this) (-O)",
         "description" : "Manual: be warned that you really need to know what you are doing when using this option",
         "argument" : "-O ",
         "showArgument" : "false"
@@ -913,7 +913,7 @@
     {
       "id" : "random_seed",
       "details": {
-        "label" : "Random number seed",
+        "label" : "Random number seed (-p)",
         "description" : "if not given time based seed will be used",
         "argument" : "-p ",
         "showArgument" : "true"
@@ -927,7 +927,7 @@
     {
       "id" : "median_gamma",
       "details": {
-        "label" : "Use median for GAMMA discrete approximation",
+        "label" : "Use median for GAMMA discrete approximation (-u)",
         "description" : "instead of mean",
         "argument" : "-u ",
         "showArgument" : "true"
@@ -941,7 +941,7 @@
     {
       "id" : "rate_het_disable",
       "details": {
-        "label" : "Disable rate heterogeneity (CAT model only)",
+        "label" : "Disable rate heterogeneity (CAT model only) (-V)",
         "description" : "Only   works   if   you   specify   the   CAT   model   of   rate   heterogeneity",
         "argument" : "-V ",
         "showArgument" : "true"
@@ -955,7 +955,7 @@
     {
       "id" : "slid_win_size",
       "details": {
-        "label" : "Sliding window size for leave one out site specific placement bias algorithm",
+        "label" : "Sliding window size for leave one out site specific placement bias algorithm (-W)",
         "description" : "Only   works   with \"-f s\"",
         "argument" : "-W ",
         "showArgument" : "true"
@@ -969,7 +969,7 @@
     {
       "id" : "rboot_seed",
       "details": {
-        "label" : "Rapid bootstrapping seed",
+        "label" : "Rapid bootstrapping seed (-x)",
         "description" : "will enable rapid bootstrapping",
         "argument" : "-x ",
         "showArgument" : "true"
@@ -983,9 +983,9 @@
     {
       "id" : "superf_pars",
       "details": {
-        "label" : "Only perform superficial parsimony search",
+        "label" : "Only perform superficial parsimony search (-X)",
         "description" : "same as -y but less specific",
-        "argument" : "-x ",
+        "argument" : "-X ",
         "showArgument" : "true"
       },
       "value": {
@@ -997,7 +997,7 @@
     {
       "id" : "pars",
       "details": {
-        "label" : "Only perform parsimony search",
+        "label" : "Only perform parsimony search (-y)",
         "description" : "",
         "argument" : "-y ",
         "showArgument" : "true"
@@ -1011,7 +1011,7 @@
     {
       "id" : "num_alt_runs",
       "details": {
-        "label" : "Number of alternative runs on distinct starting trees",
+        "label" : "Number of alternative runs on distinct starting trees (-N)",
         "description" : "In combination with the \"-b\" option, this will invoke a multiple bootstrap  analysis",
         "argument" : "-N ",
         "showArgument" : "true"
@@ -1025,7 +1025,7 @@
     {
       "id" : "mesquite",
       "details": {
-        "label" : "Output mesquite compatible files",
+        "label" : "Output mesquite compatible files (--mesquite)",
         "description" : "",
         "argument" : "--mesquite ",
         "showArgument" : "true"
@@ -1039,7 +1039,7 @@
     {
       "id" : "noseqcheck",
       "details": {
-        "label" : "Disable MSA input checking",
+        "label" : "Disable MSA input checking (--no-seq-check)",
         "description" : "check alignment with -f c",
         "argument" : "--no-seq-check ",
         "showArgument" : "true"
@@ -1053,7 +1053,7 @@
     {
       "id" : "no_bfgs",
       "details": {
-        "label" : "Disable BFGS method for GTR optimization",
+        "label" : "Disable BFGS method for GTR optimization (--no-bfgs)",
         "description" : "disabling BFGS can slow down analysis by 30%",
         "argument" : "--no-bfgs ",
         "showArgument" : "true"
@@ -1067,7 +1067,7 @@
     {
       "id": "asc_corr",
       "details" : {
-        "label" : "Ascertainment bias correction type",
+        "label" : "Ascertainment bias correction type (--asc-corr)",
         "argument" : "--asc-corr=",
         "description" : "felsenstein and stamatakis require partition file with -q, see manual for details",
         "showArgument" : "false"
@@ -1091,7 +1091,7 @@
     {
       "id": "aut_prot_model",
       "details" : {
-        "label" : "Automatic protein model selection criterion",
+        "label" : "Automatic protein model selection criterion (--auto-prot)",
         "argument" : "--auto-prot=",
         "description" : "",
         "showArgument" : "false"
@@ -1118,7 +1118,7 @@
     {
       "id" : "epa_keep_placement",
       "details": {
-        "label" : "Amount of epa placements to keep",
+        "label" : "Amount of epa placements to keep (--epa-keep-placements)",
         "description" : "",
         "argument" : "--epa-keep-placements=",
         "showArgument" : "true"
@@ -1132,7 +1132,7 @@
     {
       "id" : "epa_prob_tresh",
       "details": {
-        "label" : "Percent threshold for including potential placements of a read",
+        "label" : "Percent threshold for including potential placements of a read (--epa-prob-treshold)",
         "description" : "see manual for details",
         "argument" : "--epa-prob-treshold=",
         "showArgument" : "true"
@@ -1146,7 +1146,7 @@
     {
       "id" : "epa_acc_tresh",
       "details": {
-        "label" : "Accumulated likelihood weight  threshold for different placements of read",
+        "label" : "Accumulated likelihood weight  threshold for different placements of read (--epa-accumulated-treshold)",
         "description" : "see manual for details",
         "argument" : "--epa-accumulated-treshold=",
         "showArgument" : "true"
@@ -1160,7 +1160,7 @@
     {
       "id" : "jc69",
       "details": {
-        "label" : "Use JC69 for all partitions",
+        "label" : "Use JC69 for all partitions (--JC69)",
         "description" : "overrides all other model specifications",
         "argument" : "--JC69 ",
         "showArgument" : "true"
@@ -1174,7 +1174,7 @@
     {
       "id" : "k80",
       "details": {
-        "label" : "Use K80 for all partitions",
+        "label" : "Use K80 for all partitions (--K80)",
         "description" : "overrides all other model specifications",
         "argument" : "--K80 ",
         "showArgument" : "true"
@@ -1188,7 +1188,7 @@
     {
       "id" : "hky85",
       "details": {
-        "label" : "Use HKY85 for all partitions",
+        "label" : "Use HKY85 for all partitions (--HKY85)",
         "description" : "overrides all other model specifications",
         "argument" : "--HKY85 ",
         "showArgument" : "true"
@@ -1202,7 +1202,7 @@
     {
       "id" : "bootstop_perms",
       "details": {
-        "label" : "Number of permutations for the  bootstopping/bootstrap convergence test",
+        "label" : "Number of permutations for the  bootstopping/bootstrap convergence test (--bootstop-perms)",
         "description" : "must be 100 at least",
         "argument" : "--bootstop-perms=",
         "showArgument" : "true"
@@ -1216,7 +1216,7 @@
     {
       "id" : "quart_no_replace",
       "details": {
-        "label" : "Specify that quartets are randomly subsampled, but without replacement",
+        "label" : "Specify that quartets are randomly subsampled, but without replacement (--quartets-without-replacement)",
         "description" : "",
         "argument" : "--quartets-without-replacement ",
         "showArgument" : "true"
@@ -1230,7 +1230,7 @@
     {
       "id" : "print_ident_seqs",
       "details": {
-        "label" : "Don't remove identical sequences from .reduced file",
+        "label" : "Don't remove identical sequences from .reduced file (--print-identical-sequences)",
         "description" : "",
         "argument" : "--print-identical-sequences ",
         "showArgument" : "true"
